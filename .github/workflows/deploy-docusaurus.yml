@@ -23,10 +23,16 @@ jobs:
         with:
           node-version: '12'
       # Install and build Docusaurus website
-      - name: Build Docusaurus website
-        run: |
-          npm install 
-          npm run build
+      - name: Installation
+        uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn
+      #- name: Build Docusaurus website
+      #  run: |
+      #    npm install 
+      #    npm run build
+      - name: build
+        run: yarn && yarn build
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
