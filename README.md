@@ -41,7 +41,7 @@ This command starts a local development server and open up a browser window. Mos
 
 ### Test
 
-Open http://localhost:3000 for your website and http://localhost:3000/admin for the CMS. 
+Open http://localhost:3000/netifly-docusaurus/ for your website and http://localhost:3000/netifly-docusaurus/admin for the CMS. 
 
 Notice changes will create/update files directly within your repo locally. 
 
