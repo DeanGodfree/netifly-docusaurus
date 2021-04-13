@@ -23,15 +23,19 @@ import {
 function DocItem(props) {
   useEffect(() => {
     const script = document.createElement('script');
-	const script2 = document.createElement('script2');
     script.src = "http://localhost:8080/js/commento.js";
-	script2.src = "https://teams.microsoft.com/share/launcher.js";
     script.defer = true;
-	script2.defer = true;
-	script2.async = true;
     document.getElementById("commento").appendChild(script);
-	document.getElementById("share").appendChild(script2);
   }, []);
+
+useEffect(() => {
+    const script = document.createElement('script');
+        script.src = "https://teams.microsoft.com/share/launcher.js";
+    script.defer = true;
+        script.async = true;
+        document.getElementById("teams-share-button").appendChild(script);
+  }, []);
+
   const {siteConfig = {}} = useDocusaurusContext();
   const {url: siteUrl, title: siteTitle} = siteConfig;
   const {content: DocContent} = props;
@@ -182,9 +186,10 @@ function DocItem(props) {
                 <DocPaginator metadata={metadata} />
               </div>
 	<div id="commento"></div>
-	      <div id="share">Share this page in MS Teams <a className="teams-share-button" data-href={"http://localhost:3000/netifly-docusaurus" + useLocation().pathname}>Share this link</a></div>
-            </div>
-          </div>
+	<div><strong>Share to MS Teams</strong></div>
+<div id="teams-share-button" className="teams-share-button" data-href={"http://localhost:3000/netifly-docusaurus" + useLocation().pathname}></div>	      
+        </div>
+	</div>
           {!hideTableOfContents && DocContent.rightToc && (
             <div className="col col--3">
               <TOC headings={DocContent.rightToc} />
