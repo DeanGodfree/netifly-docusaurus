@@ -2,8 +2,6 @@
 
 This is a starter website built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator, with Netlify CMS enabled.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Alexa-Green/docusaurus-netlify-cms)
-
 ### Installation
 
 ```
@@ -41,4 +39,4 @@ Open http://localhost:3000 for your website and http://localhost:3000/admin for 
 
 Notice changes will create/update files directly within your repo locally. 
 
-Beyond this demo, the next step would be to update the static/admin/config.yml to remove local backend and use another provider(probably using gotrue.js)
+Beyond this demo, the next step would be to update the static/admin/config.yml to remove local backend and use another provider(probably using [gotrue.js](https://github.com/netlify/gotrue-js))
