@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React, {useEffect} from 'react';
+import {useLocation} from '@docusaurus/router';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -22,9 +23,14 @@ import {
 function DocItem(props) {
   useEffect(() => {
     const script = document.createElement('script');
+	const script2 = document.createElement('script2');
     script.src = "http://localhost:8080/js/commento.js";
-    script.async = true;
+	script2.src = "https://teams.microsoft.com/share/launcher.js";
+    script.defer = true;
+	script2.defer = true;
+	script2.async = true;
     document.getElementById("commento").appendChild(script);
+	document.getElementById("share").appendChild(script2);
   }, []);
   const {siteConfig = {}} = useDocusaurusContext();
   const {url: siteUrl, title: siteTitle} = siteConfig;
@@ -176,6 +182,7 @@ function DocItem(props) {
                 <DocPaginator metadata={metadata} />
               </div>
 	<div id="commento"></div>
+	      <div id="share">Share this page in MS Teams <a className="teams-share-button" data-href={"http://localhost:3000/netifly-docusaurus" + useLocation().pathname}>Share this link</a></div>
             </div>
           </div>
           {!hideTableOfContents && DocContent.rightToc && (
