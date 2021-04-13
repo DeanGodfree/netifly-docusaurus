@@ -1,4 +1,5 @@
 backend:
+  site_url: http://localhost:3000/netifly-docusaurus/
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 local_backend: true
@@ -15,7 +16,7 @@ collections:
     extension: 'md'
     format: 'frontmatter'
     editor:
-      preview: false
+      preview: true
     fields:
       # - name: 'menu'
       #   label: 'Menu'

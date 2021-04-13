@@ -7,7 +7,7 @@ sidebar_label: dean
 keywords:
   - dean
 description: deans page
-image: durdle-door-sunrise.jpg
+image: ""
 ---
 ![durdle door](durdle-door-sunrise.jpg "Durdle Door")
 
