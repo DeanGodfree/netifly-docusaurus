@@ -2,6 +2,12 @@
 
 This is a starter website built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator, with Netlify CMS enabled.
 
+### Pre-Req
+
+Node.js version >= 12.13.0 or above (which can be checked by running node -v). You can use nvm for managing multiple Node versions on a single machine installed
+
+Yarn version >= 1.5 (which can be checked by running yarn --version). Yarn is a performant package manager for JavaScript and replaces the npm client. It is not strictly necessary but highly encouraged.
+
 ### Installation
 
 ```
