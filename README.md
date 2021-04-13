@@ -30,6 +30,14 @@ $ npx netlify-cms-proxy-server
 
 This command runs the CMS on port 8081 locally(make sure there are no conflicts)
 
+### Run Commento(Comments Service)
+
+```
+$ docker-compose -f docker-compose.yml up
+```
+
+This command brings up the commento service on http://localhost:8080. Please sign up with test@testmail.com and a password. Then add a domain with http://localhost:3000/netifly-docusaurus. Customise the settings as you see fit. 
+
 ### Local Development
 
 ```
